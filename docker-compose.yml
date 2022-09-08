@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+
+  nginx:
+    build: ./nginx
+    image: nginx-i
+    container_name: nginx
+    ports:
+      - 80:80
+    volumes_from:
+      - app-data
+
+  app-data:
+    build: ./www/html
+    image: app-data-i
+    container_name: ap-data
+    volumes:
+      - ./www/html/:/var/www/html/
+  
+  mysql-data:
+    build: ./mysql-data
+    image: mysql-data-i
+    container_name: mysql-data
