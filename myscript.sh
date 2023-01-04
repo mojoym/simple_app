@@ -9,7 +9,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 apt-cache policy docker-ce
 sudo apt install docker.io
 
-echo "create folder & get content from git"
+echo "get content from git"
 
 git clone http://github.com/mojoym/simple_app
 
