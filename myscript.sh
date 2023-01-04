@@ -1,6 +1,6 @@
 #!/bin/bash
 
-// install docker & docker-compose
+echo "install docker & docker-compose"
 
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -10,15 +10,14 @@ apt-cache policy docker-ce
 sudo apt install docker-ce
 sudo apt install docker-compose-plugin
 
-
-// create folder & get content from git
+echo "create folder & get content from git"
 
 mkdir /home/makar/Documents/docker_content
 cd /home/makar/Documents/docker_content
 git clone http://github.com/mojoym/simple_app
 cd /home/makar/Documents/docker_content/simple_app
 
+echo "build images and run containers"
 
-// build images and run containers
 sudo docker compose build
 sudo docker compose up -d
