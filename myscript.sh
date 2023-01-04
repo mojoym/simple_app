@@ -8,6 +8,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 apt-cache policy docker-ce
 sudo apt install docker.io  -y
+sudo apt install docker-compose-plugin -y
 
 echo "get content from git"
 
@@ -15,6 +16,6 @@ git clone http://github.com/mojoym/simple_app
 
 echo "build images and run containers"
 
-sudo docker-compose build
-sudo docker-compose up -d
-sudo docker-compose ps
+sudo docker compose build
+sudo docker compose up -d
+sudo docker compose ps
