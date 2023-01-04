@@ -12,10 +12,7 @@ sudo apt install docker-compose-plugin
 
 echo "create folder & get content from git"
 
-mkdir /home/makar/Documents/docker_content
-cd /home/makar/Documents/docker_content
 git clone http://github.com/mojoym/simple_app
-cd /home/makar/Documents/docker_content/simple_app
 
 echo "build images and run containers"
 
