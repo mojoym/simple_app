@@ -15,5 +15,6 @@ git clone http://github.com/mojoym/simple_app
 
 echo "build images and run containers"
 
-sudo docker compose build
-sudo docker compose up -d
+sudo docker-compose build
+sudo docker-compose up -d
+sudo docker-compose ps
